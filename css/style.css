@@ -1,0 +1,245 @@
+/* OVERALL BODY STYLEING */
+@font-face {
+    font-family: coc-font;
+    src: url(../font/Supercell-magic-webfont.ttf);
+}
+
+@font-face {
+    font-family: regular-font;
+    src: url(../font/BeVietnamPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: title-font;
+    src: url(../font/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+    font-family: list-font;
+    src: url(../font/LexendDeca-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffdee9;
+    background-image: linear-gradient(255deg, #ffdee9 0%, #b5fffc 100%);
+    display: flex;
+    font-family: coc-font;
+    font-size: 10px;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.fa-user {
+    color: purple;
+}
+
+.fa-window-maximize {
+    color: skyblue;
+}
+
+.fa-html5 {
+    color: rgb(231, 161, 69);
+}
+
+.fa-css3-alt {
+    color: rgb(85, 85, 228);
+}
+
+.fa-bootstrap {
+    color: purple;
+}
+
+
+/* AREA STYLEING_____________ */
+.area {
+    width: 33%;
+    height: 100vh;
+    /* border: 1px solid red; */
+}
+
+/* LEFT AREA STYLEING_____________ */
+.left_area {
+    display: flex;
+    position: relative;
+}
+
+.left_area .earth {
+    width: 100%;
+    position: absolute;
+    top: -5%;
+    left: -40%;
+    animation: rotation 40s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+.left_area .charcter {
+    transform: perspective(400px) scaleX(-1);
+    width: 90%;
+    align-self: center;
+}
+
+/* MIDDILE AREA STYLEING_____________ */
+.middle_area {
+    display: flex;
+    flex-direction: column;
+}
+
+.middle_area .message_area {
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    overflow: scroll;
+}
+
+.message_area::-webkit-scrollbar {
+    display: none;
+}
+
+.message_area .msg {
+    background-color: white;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    border-radius: 5px 15px 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    color: rgba(78, 78, 78, 0.795);
+    margin: 7px 5px;
+    overflow: hidden;
+}
+
+.message_area .msg::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.message_area .my_msg {
+    justify-self: flex-end;
+    align-self: flex-end;
+    background-color: #78a7f754;
+    color: rgb(53, 53, 53);
+    border-radius: 15px 5px 5px 5px;
+
+}
+
+
+.middle_area .input_area {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle_area .input_area .input,
+.middle_area .input_area .input:focus {
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 10px;
+    outline: none;
+    padding: 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    font-family: coc-font;
+    font-size: 14px;
+    color: rgb(5, 66, 94);
+}
+
+.input::placeholder {
+    color: rgb(210, 210, 218);
+}
+
+.middle_area .input_area .send {
+    display: inline;
+    height: 50px;
+    transform: perspective(400px) scaleX(-1);
+}
+
+
+.right_area {
+    display: flex;
+    justify-content: right;
+}
+
+.right_area .command_nav {
+    width: 70%;
+    /* margin-top: 10%; */
+    padding: 20px;
+    border-radius: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.466);
+    backdrop-filter: blur(5px);
+    /* display: none; */
+
+
+}
+
+.command_nav .title {
+    font-family: title-font;
+    line-height: 50px;
+    letter-spacing: 2px;
+    font-size: 40px;
+    margin: 0;
+    color: rgba(17, 13, 59, 0.699);
+}
+
+.command_nav .list {
+    list-style: none;
+    margin-top: 10px;
+    font-family: list-font;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.command_nav .list .option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.command_nav .list .option:hover {
+    background-color: rgba(139, 139, 139, 0.171);
+
+}
+
+.command_nav .list .option .list_item {
+    margin-left: 10px;
+    color: rgba(19, 19, 19, 0.795);
+    color: rgb(48, 67, 97);
+    margin-right: auto;
+    font-size: 14px;
+}
+
+.command_nav .list .option .count {
+    background-color: rgba(0, 0, 0, 0.267);
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 12px;
+}
